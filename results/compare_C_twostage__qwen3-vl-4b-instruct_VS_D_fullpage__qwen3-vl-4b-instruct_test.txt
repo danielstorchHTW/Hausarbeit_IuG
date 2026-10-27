@@ -1,0 +1,14 @@
+Vergleich (Split test, n = 34 Pläne)
+  A = C_twostage__qwen3-vl-4b-instruct
+  B = D_fullpage__qwen3-vl-4b-instruct
+
+Feld       Acc A   Acc B    Diff  b(A+B-)  c(A-B+)       p  p_Holm
+Title       67.6    47.1   -20.6       11        4   0.118   0.237
+Date        50.0    26.5   -23.5       10        2   0.039   0.116
+ID          20.6    47.1   +26.5        0        9   0.004   0.016
+Scale       70.6    67.6    -2.9        6        5   1.000   1.000
+
+Titel-NLS: Mittel A = 0.759, B = 0.582, Wilcoxon W = 108.0, p = 0.018 (n = 33)
+Makro-Genauigkeit: A = 52.2 %, B = 47.1 %, Differenz = -5.1 Pp. [95%-KI -16.2; +6.6]
+
+b = nur A richtig, c = nur B richtig. p < 0,05 (nach Holm) gilt als signifikant.

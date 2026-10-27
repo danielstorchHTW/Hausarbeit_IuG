@@ -1,0 +1,5 @@
+# Python >= 3.9 (empfohlen 3.12). Installation:  pip install -r requirements.txt
+Pillow>=10.0        # Bildverarbeitung (TIFF, JPEG)
+pypdfium2>=4.0      # PDF-Seiten rendern
+scipy>=1.10         # Wilcoxon-Test
+matplotlib>=3.7     # Abbildung für die Arbeit

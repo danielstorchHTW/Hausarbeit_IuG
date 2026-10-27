@@ -1,0 +1,18 @@
+# Vertrauliche Daten liegen ohnehin AUSSERHALB dieses Ordners (../plans, ../arbeitsdaten).
+# Zusätzliche Sicherung, falls doch etwas hierher kopiert wird:
+plans/
+data/
+runs/
+arbeitsdaten/
+ground_truth*.csv
+*.tif
+*.tiff
+*.TIF
+*.jpg
+*.jsonl
+
+# Umgebung
+.venv/
+__pycache__/
+.DS_Store
+.vscode/

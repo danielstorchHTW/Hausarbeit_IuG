@@ -1,0 +1,7 @@
+### USER
+Das Bild zeigt einen vollständigen gescannten Bauplan. Finde den Bereich mit den Plan-Metadaten: das Schriftfeld (Plankopf) mit Plantitel, Maßstab und Datum sowie die Plannummer. Das Schriftfeld liegt oft unten rechts, bei älteren Plänen aber auch oben, mittig oder an einem anderen Rand. Die Plannummer steht manchmal als Stempel oder Vermerk direkt neben dem Schriftfeld oder in der Ecke des Blattes; schließe sie dann mit in den Bereich ein.
+
+Gibt es kein abgegrenztes Schriftfeld, wähle den Bereich, in dem Plantitel und Maßstab stehen.
+
+Gib die Position als Bounding Box in relativen Koordinaten von 0 bis 1000 zurück: [x1, y1, x2, y2], wobei (x1, y1) die linke obere und (x2, y2) die rechte untere Ecke ist.
+Antworte ausschließlich mit JSON im Format {"bbox_2d": [x1, y1, x2, y2]}.

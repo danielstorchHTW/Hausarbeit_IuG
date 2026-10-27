@@ -1,0 +1,14 @@
+Vergleich (Split test, n = 34 Pläne)
+  A = A_baseline__qwen3-vl-4b-instruct
+  B = B_structured__qwen3-vl-4b-instruct
+
+Feld       Acc A   Acc B    Diff  b(A+B-)  c(A-B+)       p  p_Holm
+Title       32.4    52.9   +20.6        1        8   0.039   0.156
+Date        52.9    55.9    +2.9        2        3   1.000   1.000
+ID          26.5    32.4    +5.9        0        2   0.500   1.000
+Scale       61.8    61.8    +0.0        0        0   1.000   1.000
+
+Titel-NLS: Mittel A = 0.467, B = 0.615, Wilcoxon W = 24.5, p = 0.001 (n = 33)
+Makro-Genauigkeit: A = 43.4 %, B = 50.7 %, Differenz = +7.4 Pp. [95%-KI +2.9; +12.5]
+
+b = nur A richtig, c = nur B richtig. p < 0,05 (nach Holm) gilt als signifikant.

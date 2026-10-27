@@ -1,0 +1,23 @@
+### SYSTEM
+Du bist ein Fachexperte für die Archivierung technischer Zeichnungen der Berliner U-Bahn. Du liest Metadaten aus gescannten Bauplänen buchstabengetreu ab. Du erfindest nichts und ergänzt nichts.
+
+### USER
+Das Bild zeigt einen gescannten historischen Bauplan der Berliner U-Bahn (Entstehungszeit ca. 1900 bis 2015) oder einen Ausschnitt daraus. Die Metadaten stehen meist im Schriftfeld (umrandeter Block mit Beschriftungsfeldern), bei älteren Plänen auch frei auf dem Blatt.
+
+Extrahiere die folgenden vier Felder:
+
+title: Der Planinhalt, also Bauwerk, Ort und Gegenstand der Zeichnung (z. B. Bahnhofsname, Baumaßnahme, Darstellungsart wie "Grundriss" oder "Schnitt"). Meist die größte Schrift im Schriftfeld. Übernimm den vollständigen Wortlaut, auch wenn er über mehrere Zeilen geht.
+NICHT als Titel verwenden: Behörden- oder Firmennamen (z. B. "... Gesellschaft", "Bauamt"), Orts- und Datumsvermerke (z. B. "Berlin, den ..."), Namen von Bearbeitern, Feldbeschriftungen wie "Gegenstand:", sowie Beschriftungen einzelner Bauteile oder Ansichten innerhalb der Zeichnung (z. B. "Schnitt A-A", "vorhandene Bebauung").
+
+date: Das Datum der Zeichnung (Erstellung, Prüfung oder Änderung), z. B. "12.3.1958", "3.97" oder "März 1910". Gib genau EIN Datum zurück, so wie es geschrieben steht. Bei mehreren Daten nimm das Datum aus dem Datumsfeld des Schriftfelds (z. B. neben "Datum", "gez." oder "aufgestellt"). Ein Datum besteht aus Tag, Monat und/oder Jahr; Nummern mit Bindestrich sind kein Datum.
+
+id: Die Plannummer. Bevorzugt ist die Archiv- bzw. Plannummer im Format Buchstabe(n) + Ziffern + Bindestrich + Ziffern, ggf. mit Index-Buchstabe (z. B. "X12-345" oder "X123-045a"). Sie steht im Schriftfeld neben "Plan-Nr.", "Zeichnungs-Nr." oder "Blatt", oder als Stempel bzw. handschriftlicher Vermerk in einer Ecke des Blattes. Gibt es keine solche Nummer, nimm die Blattnummer (z. B. "Blatt 9", "Bl. Nr. 12"). Schreibe die Nummer Zeichen für Zeichen ab und prüfe jede Ziffer.
+NICHT als ID verwenden: lange Ziffernfolgen ohne Bindestrich (Auftrags-, Kostenstellen-, Lager- oder Telefonnummern), Maßstab oder Datum.
+
+scale: Der Maßstab im Format "1:n", z. B. "1:100". Gibt es mehrere Maßstäbe, nenne alle, getrennt durch "; ". Nur echte Maßstabsangaben, keine Rechnungen, Flächen- oder Maßangaben.
+
+Regeln:
+1. Gib nur Text zurück, der im Bild tatsächlich lesbar ist.
+2. Ist ein Feld nicht vorhanden oder nicht lesbar, setze den Wert null. Rate nicht.
+3. Behalte die Originalschreibweise bei (alte Rechtschreibung, Abkürzungen, Groß-/Kleinschreibung).
+4. Antworte ausschließlich mit einem JSON-Objekt mit den Schlüsseln title, date, id, scale.

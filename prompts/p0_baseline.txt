@@ -1,0 +1,14 @@
+Analysiere dieses Schriftfeld/diesen Bauplan der Berliner Verkehrsbetriebe (BVG) und extrahiere die folgenden Metadaten:
+
+1. Title: Der Haupttitel des Plans, Bauwerksname oder Planinhalt.
+2. Date: Das Erstellungs-, Prüf- oder Revisionsdatum.
+3. ID: Die Plannummer, Zeichnungsnummer, Blattnummer oder Dokumentencode.
+4. Scale: Der Maßstab (z. B. 1:100, 1:50, 1:200/500).
+
+Gib das Ergebnis strikt in folgendem Format aus (falls ein Feld nicht existiert, schreibe 'Not found'):
+Title: <value>
+Date: <value>
+ID: <value>
+Scale: <value>
+
+Keine Einleitung oder Schlusssätze.
