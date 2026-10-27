@@ -59,3 +59,9 @@ python 01b_annotate_layout.py # Lage des Schriftfelds je Plan manuell erfassen
 | `04_compare.py` | vergleicht zwei Varianten paarweise (inkl. Bootstrap-Konfidenzintervall) |
 | `05_plot.py` | erstellt die Abbildung |
 | `results/` | Ergebnistabellen und Abbildung (nur Kennzahlen, keine Planinhalte) |
+
+## Hinweis zur KI-Nutzung
+
+Der Code wurde mit Unterstützung von Claude (Anthropic) erstellt und überarbeitet.
+Versuchsaufbau, Durchführung, Annotation und Auswertung der Ergebnisse lagen beim Autor;
+alle Ergebnisse in `results/` stammen aus eigenen Läufen.
