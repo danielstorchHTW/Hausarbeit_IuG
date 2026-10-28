@@ -190,7 +190,8 @@ if __name__ == "__main__":
         lines.append("| " + " | ".join([
             m["run"], str(m["n_docs"]), *(pct(m[f]["acc"]) for f in C.FIELDS), pct(m["macro_acc"]),
             pct(m["Title"]["anls"]), pct(m["halluc_rate"]), str(m["docs_all_correct"]),
-            pct(m["valid_rate"]), f"{m['sec_per_doc']:.0f}"]) + " |")
+            pct(m["valid_rate"]),
+            "–" if m["sec_per_doc"] is None else f"{m['sec_per_doc']:.0f}"]) + " |")
     md = "\n".join(lines)
     print(f"\nErgebnisse (Split: {args.split}, Angaben in %)\n" + md)
 

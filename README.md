@@ -46,6 +46,8 @@ python 00_check_setup.py      # prüft die Umgebung
 python 01_prepare_data.py     # Pseudonyme, Split 8 Entwicklung / 34 Test, Bild-Cache
 python 01b_annotate_layout.py # Lage des Schriftfelds je Plan manuell erfassen
 ./run_all.sh                  # alle vier Varianten + Auswertung (ca. 2 Stunden)
+python 06_import_projekt.py   # Ausgaben des lokalen Modells aus der Projektwoche übernehmen (A')
+python 07_zusatzanalysen.py   # Zusatzauswertungen -> results/zusatzanalysen.md
 ```
 
 ## Dateien
@@ -58,6 +60,8 @@ python 01b_annotate_layout.py # Lage des Schriftfelds je Plan manuell erfassen
 | `03_evaluate.py` | bewertet die Ausgaben mit festen Regeln (ohne LLM-Bewerter) |
 | `04_compare.py` | vergleicht zwei Varianten paarweise (inkl. Bootstrap-Konfidenzintervall) |
 | `05_plot.py` | erstellt die Abbildung |
+| `06_import_projekt.py` | übernimmt die Projektausgaben von Qwen2.5-VL-3B (`results_local_vlm.txt`) als Lauf A' |
+| `07_zusatzanalysen.py` | Modellvergleich A'–A, Laufzeit-Median, Schriftfeldlage, Art der ID-Fehler, Determinismus |
 | `results/` | Ergebnistabellen und Abbildung (nur Kennzahlen, keine Planinhalte) |
 | `results/split.csv` | Zuordnung der Pläne (Pseudonyme) zu Entwicklungs- und Testset, mit Qualität und Lage des Schriftfelds |
 
